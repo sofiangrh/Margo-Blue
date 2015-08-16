@@ -2,6 +2,7 @@
 This is a new version of the theme marid-blue-1. But that applied too much change in theme - publish it as something new, because it really is something new :)
 
 >Note:
+>
 >theme unpack >> .theme $home
 >Work: mate, lxde, xfce, gnome2
 
