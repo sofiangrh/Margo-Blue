@@ -1,0 +1,853 @@
+
+# Please keep this gtkrc in sync with the other ones from Clearlooks based themes.
+
+gtk-color-scheme = "base_color:#ffffff\nfg_color:#000000\ntooltip_fg_color:#000000\nselected_bg_color:#4A90D9\nselected_fg_color:#ffffff\ntext_color:#000000\nbg_color:#ede9e3\ntooltip_bg_color:#FFFFBF"
+
+gtk-icon-sizes = "panel-menu=16,16:gtk-large-toolbar=24,24"
+gtk-auto-mnemonics = 1
+style "default" {
+	xthickness = 0
+	ythickness = 0
+
+	#######################
+	# Style Properties
+	#######################
+        GtkButton::child-displacement-x = 0
+	GtkButton::child-displacement-y = 0
+	GtkButton::default-border = {0, 0, 0, 0}
+        GtkButton::default-outside-border = {0, 0, 0, 0}
+
+	GtkCheckButton::indicator-size = 10
+        GtkCheckButton::indicator-spacing = 0
+        GtkCheckButton::shadow = {0, 0, 0, 0}
+      
+	GtkPaned::handle-size = 2
+        	
+        GtkRange::trough-border	= 0
+	GtkRange::slider-width = 11
+	GtkRange::stepper-size = 0
+	GtkRange::stepper_spacing = 0
+	GtkRange::trough-under-steppers = 0
+        GtkRange::shadow = {0, 0, 0, 0}
+
+        GtkScale::trough-border = 0
+	GtkScale::slider-width = 20
+	GtkScale::slider-length = 10
+	GtkScale::trough-side-details = 0
+        GtkScale::shadow = {0, 0, 0, 0}
+        
+        GtkScrolledWindow::scrollbar-spacing  = 0
+        GtkScrolledWindow::scrollbars-within-bevel = 0
+        GtkScrolledWindow::shadow = {0, 0, 0, 0}
+        
+	GtkScrollbar::activate-slider = 0
+	GtkScrollbar::trough-border = 0
+	GtkScrollbar::slider-width = 15
+	GtkScrollbar::slider-hight = 15
+        GtkScrollbar::min-slider-length = 24
+        GtkScrollbar::has-backward-stepper = 0
+        GtkScrollbar::has-secondary-backward-stepper = 0
+        GtkScrollbar::has-forward-stepper = 0
+	GtkScrollbar::has-secondary-forward-stepper = 0
+        GtkScrollbar::default-border = {0, 0, 0, 0}
+        GtkScrollbar::default-outside-border = {0, 0, 0, 0}
+        
+        GtkMenuBar::internal-padding = 2
+	GtkMenuBar::shadow-type = 0
+        GtkMenuBar::trough-border = 0
+        GtkMenuBar::shadow = {0, 0, 0, 0}
+        
+        GtkNotebook::tab-overlap = -2
+        
+        GtkToolbar::internal-padding = 0
+	GtkToolbar::shadow-type = 0
+        GtkToolbar::space-size = 0
+        #GtkToolbar::shadow = {0, 0, 0, 0}
+        GtkToolbar	::shadow-type = GTK_SHADOW_NONE
+
+        GtkExpander::expander-size = 5
+	GtkExpander::shadow = {0, 0, 0, 0}
+        
+        GtkTreeView::expander-size = 0
+	GtkTreeView::vertical-separator = 0
+        GtkTreeview::shadow-type = GTK_SHADOW_NONE
+	
+        GtkMenu::horizontal-padding = 0
+	GtkMenu::internal-padding = 0
+        GtkMenu::double-arrows = FALSE
+        GtkMenu::vertical-padding = 0
+	GtkMenu::shadow = {0, 0, 0, 0}
+        
+        WnckTasklist::fade-overlay-rect = 1
+	WnckTasklist::shadow-type = GTK_SHADOW_NONE
+        
+        GtkEntry::honors-transparent-fg-hint = 0
+        GtkEntry::honors-transparent-bg-hint = 1
+	GtkEntry::state-hint = 0
+        GtkEntry::has-frame = TRUE
+        GtkEntry::progress-border = {2, 2, 2, 2}
+
+        GtkProgressBar::min-horizontal-bar-height = 5
+	GtkProgressBar::min-horizontal-bar-width = 120
+        GtkProgressBar::min-vertical-bar-height = 5
+        GtkProgressBar::min-vertical-bar-width = 10
+        GtkProgressBar::gtk_progress_bar_set_text = 8
+        #GtkProgressBar::shadow = {0, 0, 0, 0}        
+        GtkProgressBar::shadow-type = GTK_SHADOW_NONE
+        
+        GtkMenuBar::shadow = {0, 0, 0, 0}
+        GtkMenuBar::vertical-padding = 0
+        GtkMenuBar::internal-padding = 0
+        GtkMenuBar::horizontal-padding = 0
+        GtkMenuBar::shadow-type = GTK_SHADOW_NONE
+	GtkMenuBar::window-dragging = 1
+
+        GtkWidget::focus-line-width = 0
+        GtkWidget::focus-line-hight = 0
+        GtkWidget::shadow = {0, 0, 0, 0}
+        
+        GtkFrame::label-xalign = 0
+        GtkFrame::label-yalign = 0
+        GtkFrame::shadow = {0, 0, 0, 0}
+        
+        GtkComboBox::has-entry = FALSE
+        GtkComboBox::popup-shown = TRUE
+        GtkComboBox::arrow-size = 0
+        GtkComboBox::shadow = {0, 0, 0, 0}
+        
+        GtkWindow::resize-grip-height = 0
+	GtkWindow::resize-grip-width = 0
+        ####################
+	# Color Definitions
+	####################
+        
+	bg[NORMAL]        = shade (2.9, @bg_color)
+	bg[PRELIGHT]      = shade (2.02, @bg_color)
+	bg[SELECTED]      = @selected_bg_color
+	bg[INSENSITIVE]   = lighter (@bg_color)
+	bg[ACTIVE]        = @bg_color
+
+        fg[NORMAL]        = shade (2.9, @fg_color)
+	fg[PRELIGHT]      = shade (2.9, @fg_color)
+	fg[SELECTED]      = @selected_fg_color
+	fg[INSENSITIVE]   = darker (@bg_color)
+	fg[ACTIVE]        = @fg_color
+
+        text[NORMAL]      = @text_color
+	text[PRELIGHT]    = @text_color
+	text[SELECTED]    = @selected_fg_color
+	text[INSENSITIVE] = darker (@bg_color)
+	text[ACTIVE]      = @selected_fg_color
+
+        base[NORMAL]      = @base_color
+	base[PRELIGHT]    = shade (0.95, @bg_color)
+	base[SELECTED]    = @selected_bg_color
+	base[INSENSITIVE] = @bg_color
+	base[ACTIVE]      = shade (0.9, @selected_bg_color)
+
+	engine "clearlooks" {
+		colorize_scrollbar = TRUE
+		reliefstyle = 1 # 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
+		menubarstyle = 3 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+		toolbarstyle = 2 # 0 = flat, 1 = glassy, 2 = gradient
+		animation = TRUE # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
+		radius = 12.24
+		style = INVERTED
+		hint = "use-hints"
+                
+	}
+}
+# 0 = no vertical menu stripe, 1 = display vertical menu stripe (menustyle)
+style "wide" {
+        xthickness = 0
+	ythickness = 0
+             engine "clearlooks" {
+		hint = "scale"
+                radius = 8.8
+	}
+}
+
+style "wider" {
+        xthickness = 0
+	ythickness = 0
+            engine "clearlooks" {
+		hint = "scale"
+                radius = 8.8
+	}
+}
+
+style "entry" {
+	xthickness = 0
+	ythickness = 0
+
+        bg[SELECTED] = mix (2.4, @selected_bg_color, @base_color)
+	fg[SELECTED] = @selected_fg_color
+
+	engine "clearlooks" {
+		radius = 12.8
+	}
+}
+
+style "spinbutton" {
+       xthickness = 2
+       ythickness = 1
+	engine "clearlooks" {
+		hint = "spinbutton"
+                radius = 8.8
+	}
+}
+
+style "frame" {
+       xthickness = 0
+       ythickness = 0
+	engine "clearlooks" {
+		hint = "frame"
+                radius = 8.8
+	}
+}
+
+style "scale" {
+	xthickness = 1
+	ythickness = 1
+
+        bg[NORMAL]        = shade (1.05, @bg_color)
+	bg[INSENSITIVE]   = shade (3.34, @bg_color)
+	bg[PRELIGHT]      = shade (2.08, @bg_color)
+
+	engine "clearlooks" {
+		hint = "scale"
+                radius = 8.8
+	}
+}
+
+style "vscale" {
+         xthickness = 0
+	 ythickness = 0
+          engine "clearlooks" {
+		radius = 8.8
+
+}
+}
+style "hscale" {
+         xthickness = 0
+	 ythickness = 0 
+           engine "clearlooks" {
+		radius = 8.8
+}
+}
+style "scrollbar" {
+	engine "pixmap" {
+		image {
+			function	= SLIDER
+			orientation	= VERTICAL
+			state		= NORMAL
+			recolorable	= TRUE
+			file		= "assets/scroll-vhandle.png"
+			border		= {5, 5, 15, 22}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= SLIDER
+			orientation	= VERTICAL
+			state		= PRELIGHT
+			recolorable	= TRUE
+			file		= "assets/scroll-vhandle-hover.png"
+			border		= {5, 5, 15, 22}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= BOX
+			orientation	= VERTICAL
+			file		= "assets/scroll-background.png"
+		}
+
+		#image {
+		#	function	= BOX
+                # 	detail		= "hscrollbar"
+                #        file		= "assets/scroll-background.png"
+		#}
+               
+                image {
+			function	= BOX
+			orientation	= HORIZONTAL
+			file		= "assets/scroll-background.png"
+		}
+
+		#image {
+		#	function	= BOX
+		#	detail		= "vscrollbar"
+                #        file		= "assets/scroll-background.png"
+		#}
+
+		image {
+			function	= SLIDER
+			orientation	= HORIZONTAL
+			state		= NORMAL
+			recolorable	= TRUE
+			file		= "assets/scroll-hhandle.png"
+			border		= {15, 22, 5, 5}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= SLIDER
+			orientation	= HORIZONTAL
+			state		= PRELIGHT
+			recolorable	= TRUE
+			file		= "assets/scroll-hhandle-hover.png"
+			border		= {15, 22, 5, 5}
+			stretch		= TRUE
+		}
+
+		
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "assets/scroll-button-up.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "assets/scroll-button-up-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/scroll-button-up-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "assets/scroll-button-up-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "assets/scroll-button-down.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "assets/scroll-button-down-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/scroll-button-down-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "assets/scroll-button-down-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "assets/scroll-button-right.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "assets/scroll-button-right-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/scroll-button-right-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "assets/scroll-button-right-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "assets/scroll-button-left.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "assets/scroll-button-left-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/scroll-button-left-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "assets/scroll-button-left-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+	}
+}
+
+style "notebook" { # tab
+	xthickness	= 0
+	ythickness	= 0
+
+	engine "pixmap" {
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/tab-bottom.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= TOP
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/tab-top.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= BOTTOM
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/tab-left.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= RIGHT
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "assets/tab-right.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= LEFT
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			file		= "assets/tab-top-active.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= BOTTOM
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			file		= "assets/tab-bottom-active.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= TOP
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			file		= "assets/tab-left-active.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= RIGHT
+		}
+
+		image {
+			function	= EXTENSION
+			recolorable	= TRUE
+			file		= "assets/tab-right-active.png"
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_side	= LEFT
+		}
+
+		image {
+			function	= BOX_GAP
+			recolorable	= TRUE
+			file		= "assets/notebook.png" 
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_file	= "assets/notebook-gap-top.png"
+			#gap_border     	= {4, 7, 2, 0}
+			gap_side	= TOP
+		}
+
+		image {
+			function	= BOX_GAP
+			recolorable	= TRUE
+			file		= "assets/notebook.png" 
+			border		= {4, 4, 4, 4}
+			stretch		= TRUE
+			gap_file	= "assets/notebook-gap-bottom.png"
+			#gap_border     	= {4, 7, 0, 2}
+			gap_side	= BOTTOM
+		}
+
+		#image {
+		#	function	= BOX
+		#	recolorable	= TRUE
+		#	file		= "assets/notebook.png"
+			#border		= {6, 6, 6, 6}
+		#	stretch		= TRUE
+		#}
+	}
+}
+
+style "notebook_bg" {
+}
+
+style "button" {
+	xthickness = 1
+	ythickness = 1
+
+	bg[NORMAL]        = shade (1.05, @bg_color)
+	bg[INSENSITIVE]   = shade (3.34, @bg_color)
+        fg[PRELIGHT]      = shade (3.05, @fg_color)
+        engine "clearlooks" {
+		hint = "button"
+                radius = 8.5
+	}
+}
+
+style "notebook" {
+	xthickness = 0
+	ythickness = 0
+        
+}
+
+style "statusbar" {
+       xthickness = 0
+       ythickness = 0
+	engine "clearlooks" {
+		hint = "statusbar"
+                radius = 8.12
+	}
+}
+
+style "comboboxentry" {
+        xthickness = 1
+	ythickness = 0
+	engine "clearlooks" {
+		hint = "comboboxentry"
+                radius = 8.12
+	}
+}
+
+style "menubar" {
+       xthickness = 1
+       ythickness = 1
+     	engine "clearlooks" {
+		hint = "menubar"
+                radius = 8.12
+                #menubarstyle = 3
+	}
+}
+
+style "menu" {
+	xthickness = 2
+	ythickness = 2
+
+	fg[PRELIGHT]      = shade (3.05, @bg_color)
+        bg[NORMAL]        = shade (2.05, @bg_color)
+	bg[INSENSITIVE]   = shade (3.34, @bg_color)
+
+        
+        #fg[INSENSITIVE]   = "#FFFFFF"
+            engine "clearlooks" {
+                #menustyle = 3
+		hint = "menu"
+                #radius = 8.12
+}
+}
+style "menu_item" {
+	xthickness = 2
+	ythickness = 2
+        
+	fg[PRELIGHT]      = shade (3.05, @bg_color)
+        bg[NORMAL]        = shade (2.05, @bg_color)
+	bg[INSENSITIVE]   = shade (3.34, @bg_color)
+	
+             engine "clearlooks" {
+		#menubaritemstyle = 3
+                hint = "menu_item"
+                radius = 8.12
+}
+
+}
+style "scale_menu_item" {
+	xthickness = 2
+	ythickness = 2
+        fg[PRELIGHT]      = shade (3.05, @bg_color)
+        bg[NORMAL]        = shade (2.05, @bg_color)
+	bg[INSENSITIVE]   = shade (3.34, @bg_color)
+
+	engine "clearlooks" {
+		hint = "scale_menu_item"
+                radius = 8.12
+}
+}
+style "frame_title" {
+	xthickness = 2
+	ythickness = 0
+
+	fg[PRELIGHT]      = shade (3.05, @bg_color)
+        bg[NORMAL]        = shade (2.05, @bg_color)
+	bg[INSENSITIVE]   = shade (3.34, @bg_color)
+            engine "clearlooks" {
+		hint = "frame_title"
+                radius = 8.12
+}
+}
+
+style "treeview" {
+	xthickness = 2
+	ythickness = 1
+
+	engine "clearlooks" {
+		hint = "treeview"
+                radius = 8.12
+	}
+}
+
+style "progressbar" {
+	xthickness = 0
+	ythickness = 0
+
+	fg[PRELIGHT]      = @bg_color
+        bg[PRELIGHT]      = @fg_color
+	fg[NORMAL]        = @fg_color
+        
+           engine "clearlooks" {
+	       radius = 12.24
+               hint = "progressbar"
+               
+}
+}
+
+style "treeview_header" {
+	xthickness = 2
+	ythickness = 1
+
+	engine "clearlooks" {
+		hint = "treeview-header"
+                radius = 8.12
+	}
+}
+
+style "tooltips" {
+	xthickness = 2
+	ythickness = 1
+
+}
+style "caja_location" {
+
+	bg[NORMAL]        = mix (1.60, shade (3.05, @bg_color), @selected_bg_color)
+
+}
+
+style "text_is_fg_color_workaround" {
+        text[NORMAL]      = shade (2.05, @fg_color)
+	text[PRELIGHT]    = shade (3.05, @fg_color)
+	text[SELECTED]    = @selected_fg_color
+	text[ACTIVE]      = @fg_color
+	text[INSENSITIVE] = shade (4.34, @bg_color)
+
+}
+
+style "menuitem_text_is_fg_color_workaround" {
+
+	text[NORMAL]      = shade (2.05, @fg_color)
+	text[PRELIGHT]    = shade (3.05, @selected_fg_color)
+	text[SELECTED]    = @selected_fg_color
+	text[ACTIVE]      = @fg_color
+	text[INSENSITIVE] = shade (4.34, @bg_color)
+}
+
+style "fg_is_text_color_workaround" {
+
+	fg[NORMAL]        = shade (2.05, @text_color)
+	fg[PRELIGHT]      = shade (2.05, @text_color)
+	fg[SELECTED]      = @selected_fg_color
+	fg[ACTIVE]        = @selected_fg_color
+	fg[INSENSITIVE]   = shade (4.34, @bg_color)
+}
+
+style "evo_new_button_workaround" {
+
+	engine "clearlooks" {
+		radius = 8.12
+ 	}
+}
+
+###############################################################################
+# The following part of the gtkrc applies the different styles to the widgets.
+###############################################################################
+
+# The default style is applied to every widget
+class "GtkWidget" style "default"
+
+class "GtkSeparator" style "wide"
+class "GtkFrame" style "frame"
+class "GtkEntry" style "entry"
+
+class "GtkSpinButton" style "spinbutton"
+class "GtkScale" style "scale"
+class "GtkVScale" style "vscale"
+class "GtkHScale" style "hscale"
+class "GtkScrollbar" style "scrollbar"
+
+widget_class "*<GtkNotebook>" style "notebook_bg"
+
+widget_class "*<GtkNotebook>*<GtkEventBox>" style "notebook"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>" style "notebook"
+widget_class "*<GtkNotebook>*<GtkLayout>" style "notebook"
+widget_class "*<GtkNotebook>*<GtkViewport>" style "notebook"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>" style "notebook"
+
+widget_class "*<GtkButton>" style "button"
+widget_class "*<GtkNotebook>" style "notebook"
+widget_class "*<GtkStatusbar>*" style "statusbar"
+
+widget_class "*<GtkComboBoxEntry>*" style "comboboxentry"
+widget_class "*<GtkCombo>*" style "comboboxentry"
+
+widget_class "*<GtkMenuBar>*" style "menubar"
+widget_class "*<GtkMenu>*" style "menu"
+widget_class "*<GtkMenuItem>*" style "menu_item"
+
+widget_class "*.<GtkFrame>.<GtkLabel>" style "frame_title"
+widget_class "*.<GtkTreeView>*" style "treeview"
+
+widget_class "*<GtkProgress>" style "progressbar"
+
+# Treeview headers (and similar stock GTK+ widgets)
+widget_class "*.<GtkTreeView>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkCTree>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkList>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkCList>.<GtkButton>" style "treeview_header"
+
+# The window of the tooltip is called "gtk-tooltip"
+##################################################################
+# FIXME:
+# This will not work if one embeds eg. a button into the tooltip.
+# As far as I can tell right now we will need to rework the theme
+# quite a bit to get this working correctly.
+# (It will involve setting different priorities, etc.)
+##################################################################
+widget "gtk-tooltip*" style "tooltips"
+
+##########################################################################
+# Following are special cases and workarounds for issues in applications.
+##########################################################################
+
+# Workaround for the evolution ETable (bug #527532)
+widget_class "*.<ETable>.<ECanvas>" style "treeview_header"
+# Workaround for the evolution ETree
+widget_class "*.<ETree>.<ECanvas>" style "treeview_header"
+
+# Special case the caja-extra-view-widget
+# ToDo: A more generic approach for all applications that have a widget like this.
+widget "*.caja-extra-view-widget" style : highest "caja_location"
+
+# Work around for http://bugzilla.mate.org/show_bug.cgi?id=382646
+# Note that this work around assumes that the combobox is _not_ in appears-as-list mode.
+widget_class "*.<GtkComboBox>.<GtkCellView>" style "text_is_fg_color_workaround"
+# This is the part of the workaround that fixes the menus
+widget "*.gtk-combobox-popup-menu.*" style "menuitem_text_is_fg_color_workaround"
+
+# Work around the usage of GtkLabel inside GtkListItems to display text.
+# This breaks because the label is shown on a background that is based on the base color.
+widget_class "*<GtkListItem>*" style "fg_is_text_color_workaround"
+# GtkCList also uses the fg color to draw text on top of the base colors.
+widget_class "*<GtkCList>" style "fg_is_text_color_workaround"
+# Caja when renaming files, and maybe other places.
+widget_class "*<EelEditableLabel>" style "fg_is_text_color_workaround"
+
+# See the documentation of the style.
+widget_class "EShellWindow.GtkVBox.MateComponentDock.MateComponentDockBand.MateComponentDockItem*" style "evo_new_button_workaround"
+
