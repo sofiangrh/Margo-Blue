@@ -12,7 +12,7 @@ This is a new version of the theme marid-blue-1. But that applied too much chang
 ![](http://gnome-look.org/CONTENT/content-pre2/146063-2.png)
 
 # Changelog:
-- scrollbar, progressbar... and other changes.
+- scrollbar, progressbar and other changes.
 
 # Credits to
 [myswiat](http://gnome-look.org/usermanager/search.php?username=myswiat)
