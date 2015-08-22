@@ -4,7 +4,8 @@ This is a new version of the theme marid-blue-1. But that applied too much chang
 >Note:
 >
 >theme unpack >> .theme $home
->Work: mate, lxde, xfce, gnome2
+>
+>Work on: mate, lxde, xfce, gnome2
 
 # Screenshot
 ![](http://gnome-look.org/CONTENT/content-pre1/146063-1.png)
